@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>areaDetector Plugin NDPluginPva</title>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type" />
+</head>
+<body>
+  <div style="text-align: center">
+    <h1>
+      areaDetector Plugin NDPluginPva</h1>
+    <h2>
+      March 25, 2015</h2>
+    <h2>
+      Bruno Martins</h2>
+    <h2>
+      Brookhaven National Laboratory</h2>
+  </div>
+  <h2>
+    Contents</h2>
+  <ul>
+    <li><a href="#Overview">Overview</a></li>
+    <li><a href="#Configuration">Configuration</a></li>
+  </ul>
+  <h2 id="Overview">
+    Overview
+  </h2>
+  <p>
+    This plugin converts NDArray data produced by asynNDArrayDrivers into the EPICSv4
+    normative type NTNDArray. An embedded EPICSv4 server is created to serve the new
+    NTNDArray structure as an EPICSv4 PV. A
+    <a href="http://epics-pvdata.sourceforge.net/alpha/normativeTypes/normativeTypesNDArray.html">
+    description</a> of the structure of the NTNDArray normative type is available.
+  </p>
+  <p>
+    NDPluginPva defines no parameters.
+  </p>
+
+  <h2 id="Configuration">
+    Configuration</h2>
+  <p>
+    The NDPluginPva plugin is created with the NDPvaConfigure command, either
+    from C/C++ or from the EPICS IOC shell.</p>
+  <pre>NDPvaConfigure (const char *portName, int queueSize, int blockingCallbacks,
+                      const char *NDArrayPort, int NDArrayAddr, const char *pvName,
+                      size_t maxMemory, int priority, int stackSize)
+  </pre>
+  </body>
+</html>
